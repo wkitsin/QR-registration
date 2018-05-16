@@ -1,0 +1,18 @@
+<%= link_to "Download as CSV", users_path(:format => "csv") %>
+<%= button_to 'Send Email to All Guest', mailer_index_path %>
+
+<table>
+  <tr>
+   <th>Email</th>
+   <th>Name</th>
+   <th>Registered Status</th>
+ </tr>
+
+  <% @users.each do |i| %>
+  <tr>
+     <td><%= link_to "#{i.email}", user_path(i.email)%> </td>
+     <td><%= i.name %> </td>
+     <td><%= i.enter_status %> </td>
+   </tr>
+  <% end %>
+</table>

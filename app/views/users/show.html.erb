@@ -1,0 +1,8 @@
+<%= @user.name %><br>
+<%= @user.email %>
+
+<% if @user.enter_status %>
+  <p>The user has already entered</p>
+<% else %>
+  <%= button_to "Register", users_registration_status_path(@user.id), :method => :patch%>
+<% end %>

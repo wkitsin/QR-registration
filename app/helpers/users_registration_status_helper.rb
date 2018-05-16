@@ -1,0 +1,2 @@
+module UsersRegistrationStatusHelper
+end
